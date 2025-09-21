@@ -1,0 +1,25 @@
+name: spectrum
+services:
+  spectrum_app:
+    image: spectrum_app_image
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: spectrum_app_container
+    volumes:
+      - ../models:/app/models:ro
+      - ../storage:/app/storage
+    ports:
+      - 8501:8501
+      - 2307:2307
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+        limits:
+          cpus: 9.6
+          memory: 10G
+    restart: unless-stopped
