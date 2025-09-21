@@ -1,3 +1,5 @@
 *.pt
 *.log
 storage
+*.pkl
+*.ipynb
