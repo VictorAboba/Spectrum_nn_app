@@ -2,6 +2,7 @@ import pickle
 from sklearn.preprocessing import StandardScaler
 import torch
 import numpy as np
+from typing import Literal
 
 
 def preprocess(
@@ -10,15 +11,15 @@ def preprocess(
     if isinstance(batch, dict):
         batch = [batch]
 
-    batch_values = [sample.values() for sample in batch]
+    batch_values = [list(sample.values()) for sample in batch]
     preprocessed_values = preprocessor.transform(np.array(batch_values))
 
     return torch.from_numpy(preprocessed_values).to(device)
 
 
-def postprecess(batch: torch.Tensor, postprocessor: StandardScaler) -> list[dict]:
-    postprecessed = postprocessor.inverse_transform(batch.detach().cpu().numpy())
+def postprocess(batch: torch.Tensor, postprocessor: StandardScaler, prefix: Literal["p", "he"]) -> list[dict]:
+    postprocessed = postprocessor.inverse_transform(batch.detach().cpu().numpy())
 
     return [
-        {f"bin_{i}": item for i, item in enumerate(row, 1)} for row in postprecessed
+        {f"{prefix}_bin_{i}": item for i, item in enumerate(row, 1)} for row in postprocessed
     ]
