@@ -3,3 +3,5 @@
 storage
 *.pkl
 *.ipynb
+datasets
+*.zip

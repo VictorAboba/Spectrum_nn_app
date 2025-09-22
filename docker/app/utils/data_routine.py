@@ -10,10 +10,14 @@ def preprocess(
     if isinstance(batch, dict):
         batch = [batch]
 
-    batch_values = [list(sample.values()) for sample in batch]
+    batch_without_date = [
+        {k: v for k, v in sample.items() if k != "date"} for sample in batch
+    ]  # removing date from data
+
+    batch_values = [list(sample.values()) for sample in batch_without_date]
     preprocessed_values = preprocessor.transform(np.array(batch_values))
 
-    return torch.from_numpy(preprocessed_values).to(device)
+    return torch.from_numpy(preprocessed_values).to(device, dtype=torch.float32)
 
 
 def postprocess(

@@ -32,7 +32,7 @@ class ModelCNN(nn.Module):
     def forward(self, x):
         x = torch.reshape(x, shape=(-1, 1, 20))
         x = self.cnn(x)
-        x = x.squeeze()
+        x = x.flatten(1, -1)
         x = self.output(x)
 
         return x
@@ -103,7 +103,7 @@ class ModelCNNPast(nn.Module):
     def forward(self, x):
         x = torch.reshape(x, shape=(-1, 1, 17))
         x = self.cnn(x)
-        x = x.squeeze()
+        x = x.flatten(1, -1)
         x = self.output(x)
 
         return x

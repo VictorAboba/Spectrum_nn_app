@@ -6,6 +6,6 @@ COPY . /app/
 
 RUN chmod u+rx entrypoints/entrypoint.sh
 
-RUN pip --no-cache-dir install streamlit fastapi uvicorn polars pydantic
+RUN pip --no-cache-dir install -r requirements.txt
 
 ENTRYPOINT [ "entrypoints/entrypoint.sh" ]
