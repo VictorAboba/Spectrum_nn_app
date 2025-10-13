@@ -1,6 +1,6 @@
 ## 支持的语言
 [![Русский](https://img.shields.io/badge/lang- Русский-blue)](README.md)
-[![中文](https://img.shields.io/badge/lang- 中文-green?logo=github)](README.zh.md)
+[![中文](https://img.shields.io/badge/lang- 中文-green?logo=github)](docs/README.zh.md)
 [![English](https://img.shields.io/badge/lang-Espa ñol-green)](docs/README.en.md)
 
 **运行本项目需要安装 git、Docker 和 curl**
