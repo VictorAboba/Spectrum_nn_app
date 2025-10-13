@@ -1,3 +1,8 @@
+## Доступные языки
+[![Русский](https://img.shields.io/badge/lang-English-blue)](README.md)
+[![Chinese (neural)](https://img.shields.io/badge/lang-Русский-red)](docs/README.ch.md)
+[![English](https://img.shields.io/badge/lang-Español-green)](docs/README.en.md)
+
 **Для запуска необходим git, docker и curl**
 ## Скрипты
 Запуск из корня проекта через bash (например, bash start.sh, для windows просто двойной клик на .bat файл)
