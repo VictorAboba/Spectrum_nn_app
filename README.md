@@ -23,5 +23,7 @@ curl -X 'POST' \
 Tакже можно зайти в браузере `http://localhost:2307/docs` и загрузить файл вручную<br>
 ***Результат обработки будет лежать с папке storage с тем же именем файла и в том же формате, но с полями `p|he_bin_$номер_бина`.***
 ## Формат датасетов
-- Поля для моделей будущего: `date`, `BRBG`, `MRNY`, `SOPO`, `THUL`, `TXBY`, `APTY`, `OULU`, `KERG`, `YKTK`, `MOSC`, `NVBK`, `LMKS`, `JUNG`, `AATB`, `MXCO`, `ATHN`, `PSNM`, `Ap`, `SSN`, `A`
-- Поля для моделей прошлого: `date`, `BRBG`, `THUL`, `TXBY`, `APTY`, `OULU`, `KERG`, `YKTK`, `MOSC`, `NVBK`, `LMKS`, `JUNG`, `AATB`, `MXCO`, `ATHN`, `Ap`, `SSN`, `A`
+- Поля для моделей будущего: 
+  `date`, `BRBG`, `MRNY`, `SOPO`, `THUL`, `TXBY`, `APTY`, `OULU`, `KERG`, `YKTK`, `MOSC`, `NVBK`, `LMKS`, `JUNG`, `AATB`, `MXCO`, `ATHN`, `PSNM`, `Ap`, `SSN`, `A`
+- Поля для моделей прошлого: 
+  `date`, `BRBG`, `THUL`, `TXBY`, `APTY`, `OULU`, `KERG`, `YKTK`, `MOSC`, `NVBK`, `LMKS`, `JUNG`, `AATB`, `MXCO`, `ATHN`, `Ap`, `SSN`, `A`
