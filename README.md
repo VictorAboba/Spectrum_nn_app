@@ -1,7 +1,7 @@
 ## Доступные языки
 [![Русский](https://img.shields.io/badge/lang-Русский-blue)](README.md)
 [![中文](https://img.shields.io/badge/lang-中文-green?logo=github)](README.zh.md)
-[![English](https://img.shields.io/badge/lang-Español-green)](docs/README.en.md)
+[![English](https://img.shields.io/badge/lang-English-green)](docs/README.en.md)
 
 **Для запуска необходим git, docker и curl**
 ## Скрипты
