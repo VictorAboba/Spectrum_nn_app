@@ -1,9 +1,7 @@
-*.pt
 *.log
 *.csv
 *.xlsx
 *.parquet
-*.pkl
 *.ipynb
 datasets
 *.zip
